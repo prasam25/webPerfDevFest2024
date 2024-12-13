@@ -1,8 +1,9 @@
-Initialize a Node.js project:
+#Go to server folder
+#Initialize a Node.js project:
 npm init -y
 
-Install Express.js:
+#Install Express.js:
 npm install express
 
-Start the Node.js server:
-node server.js
+#Start the Node.js server:
+node server.js &
