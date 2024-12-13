@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive product detail page for an e-commerce store. Explore product details, reviews, and recommended products.">
+  <title>Responsive Product Detail Page</title>
+  <link rel="preload"as="image" href="/static/images/product-main.png">
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="/static/css/styles.css" media="print" onload="this.media='all'">
+  <style>
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Header Styles */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  /* Product Detail Section */
+  .product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+    margin: 1rem auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+  }
+
+  .image-gallery {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-gallery .main-image {
+    margin-bottom: 1rem;
+  }
+
+  .thumbnails {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .thumbnails img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+
+  .thumbnails img:hover {
+    border-color: #333;
+  }
+
+  .product-info {
+    flex: 2 1 400px;
+  }
+
+  /* Gallery Section */
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .gallery-container img {
+    flex: 1 1 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Hidden Content for Toggle */
+  .hidden {
+    display: none;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .product-detail {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .image-gallery {
+      width: 100%;
+    }
+
+    .product-info {
+      width: 100%;
+    }
+
+    .gallery-container img {
+      flex: 1 1 calc(50% - 1rem);
+      max-width: calc(50% - 1rem);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery-container img {
+      flex: 1 1 calc(100% - 1rem);
+      max-width: calc(100% - 1rem);
+    }
+  }
+
+    </style>
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous" async ></script>
+</head>
+<body>
+  <header class="header">
+    <!-- Logo Section -->
+    <div class="logo" style="min-height: 100px;">
+      <img src="/static/images/logo.png" alt="E-Commerce Logo">
+    </div>
+
+  </header>
+
+  <main>
+    <h1>FCP demo</h1>
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+      <div class="image-gallery" style="min-height: 400px;">
+        <img src="/static/images/product-main.png" alt="Main Product Image" class="main-image" >
+        <div class="thumbnails">
+          <img src="/static/images/product-thumb1.png" alt="Thumbnail 1" data-large="/static/images/product-main.png">
+          <img src="/static/images/product-thumb2.png" alt="Thumbnail 2" data-large="/static/images/product-main2.png">
+          <img src="/static/images/product-thumb3.png" alt="Thumbnail 3" data-large="/static/images/product-main3.png">
+        </div>
+      </div>
+      <div class="product-info">
+        <h2>Product Name</h2>
+        <p><strong>Price:</strong> $99.99</p>
+        <p><strong>Specifications:</strong> High-quality, durable material, lightweight.</p>
+        <p><strong>Description:</strong> This is a detailed description of the product. It highlights the features, benefits, and key selling points to attract customers.</p>
+      </div>
+    </section>
+
+    <!-- Below the Fold -->
+    <section class="most-viewed">
+      <h2>Most Viewed Products</h2>
+      <div class="gallery-container">
+        <img src="/static/images/viewed1.png" alt="Viewed Product 1">
+        <img src="/static/images/viewed2.png" alt="Viewed Product 2">
+        <img src="/static/images/viewed3.png" alt="Viewed Product 3">
+      </div>
+    </section>
+
+    <section class="recommended-products">
+      <h2>Recommended Products</h2>
+      <div class="gallery-container">
+        <img src="/static/images/recommended1.png" alt="Recommended Product 1">
+        <img src="/static/images/recommended2.png" alt="Recommended Product 2">
+        <img src="/static/images/recommended3.png" alt="Recommended Product 3">
+      </div>
+    </section>
+
+    <section class="reviews">
+      <h2>Product Reviews</h2>
+      <p><strong>John Doe:</strong> Great product! Highly recommend it.</p>
+      <p><strong>Jane Smith:</strong> Good value for money.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 E-Commerce Inc. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/static/js/script.js"></script>
+  <script src="/static/js/gallery.js"></script>
+</body>
+</html>

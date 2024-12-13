@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive product detail page for an e-commerce store. Explore product details, reviews, and recommended products.">
+  <title>Responsive Product Detail Page - INP</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <!-- Logo Section -->
+    <div class="logo">
+      <img src="/static/images/logo.png" alt="E-Commerce Logo">
+    </div>
+    <!-- Banner Section
+    <div class="banner">
+      <img src="/static/images/banner.png" alt="Header Banner">
+    </div>-->
+  </header>
+
+  <main>
+    <h1>INP demo</h1>
+    <section>
+      <!-- Button to simulate slow interaction -->
+      <button id="slowButton">Click Me (Simulate Slow Interaction)</button>
+      <p id="output"></p>
+    </section>
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+      <div class="image-gallery">
+        <img src="/static/images/product-main.png" alt="Main Product Image" class="main-image">
+        <div class="thumbnails">
+          <img src="/static/images/product-thumb1.png" alt="Thumbnail 1" data-large="/static/images/product-main.png">
+          <img src="/static/images/product-thumb2.png" alt="Thumbnail 2" data-large="/static/images/product-main2.png">
+          <img src="/static/images/product-thumb3.png" alt="Thumbnail 3" data-large="/static/images/product-main3.png">
+        </div>
+      </div>
+      <div class="product-info">
+        <h2>Product Name</h2>
+        <p><strong>Price:</strong> $99.99</p>
+        <p><strong>Specifications:</strong> High-quality, durable material, lightweight.</p>
+        <p><strong>Description:</strong> This is a detailed description of the product. It highlights the features, benefits, and key selling points to attract customers.</p>
+      </div>
+    </section>
+
+    <!-- Below the Fold -->
+    <section class="most-viewed">
+      <h2>Most Viewed Products</h2>
+      <div class="gallery-container">
+        <img src="/static/images/viewed1.png" alt="Viewed Product 1">
+        <img src="/static/images/viewed2.png" alt="Viewed Product 2">
+        <img src="/static/images/viewed3.png" alt="Viewed Product 3">
+      </div>
+    </section>
+
+    <section class="recommended-products">
+      <h2>Recommended Products</h2>
+      <div class="gallery-container">
+        <img src="/static/images/recommended1.png" alt="Recommended Product 1">
+        <img src="/static/images/recommended2.png" alt="Recommended Product 2">
+        <img src="/static/images/recommended3.png" alt="Recommended Product 3">
+      </div>
+    </section>
+
+    <section class="reviews">
+      <h2>Product Reviews</h2>
+      <p><strong>John Doe:</strong> Great product! Highly recommend it.</p>
+      <p><strong>Jane Smith:</strong> Good value for money.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 E-Commerce Inc. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/static/js/script.js"></script>
+  <script src="/static/js/gallery.js"></script>
+</body>
+</html>

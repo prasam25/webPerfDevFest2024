@@ -1,0 +1,129 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Header Styles */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  /* Product Detail Section */
+  .product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+    margin: 1rem auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+  }
+
+  .image-gallery {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-gallery .main-image {
+    margin-bottom: 1rem;
+  }
+
+  .thumbnails {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .thumbnails img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+
+  .thumbnails img:hover {
+    border-color: #333;
+  }
+
+  .product-info {
+    flex: 2 1 400px;
+  }
+
+  /* Gallery Section */
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .gallery-container img {
+    flex: 1 1 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Hidden Content for Toggle */
+  .hidden {
+    display: none;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .product-detail {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .image-gallery {
+      width: 100%;
+    }
+
+    .product-info {
+      width: 100%;
+    }
+
+    .gallery-container img {
+      flex: 1 1 calc(50% - 1rem);
+      max-width: calc(50% - 1rem);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery-container img {
+      flex: 1 1 calc(100% - 1rem);
+      max-width: calc(100% - 1rem);
+    }
+  }
